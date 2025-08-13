@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bio Sonic Barrier</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <!-- Sección de bienvenida con logo y texto -->
+  <header class="logo-inicial visible">
+    <img src="Imagenes/Logo.jpg" alt="Logo Bio Sonic Barrier" class="logo-grande" />
+    <h1 class="titulo-logo">Ledzan</h1>
+  </header>
+
+  <!-- Logo pequeño fijo arriba a la izquierda -->
+  <div class="logo-fijo oculto">
+    <img src="Imagenes/Logo.jpg" alt="Logo fijo" />
+    <span class="logo-fijo-texto">Ledzan</span>
+  </div>
+
+  <main>
+    <!-- Cuadro con borde gris para la sección del producto -->
+    <div class="contenedor-producto">
+      <section class="producto">
+        <img src="Imagenes/producto.png" alt="Producto" />
+        <div class="info">
+          <h2>Trampa para zancudos</h2>
+          <p>Trampa para zancudos, ecologica e innovador con una solucion ecologica, pero como el publico nuestra primera necesidad</p>
+          <p>$70</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tarjetas informativas -->
+    <section class="tarjetas">
+      <div class="tarjeta">
+        <div class="tarjeta-inner">
+          <div class="tarjeta-front">Consecuencias del dengue</div>
+          <div class="tarjeta-back">
+            <a href="https://es.hesperian.org/hhg/A_Community_Guide_to_Environmental_Health:Cap%C3%ADtulo_8:_Problemas_de_salud_causados_por_zancudos" target="_blank">
+              Ver más
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <div class="tarjeta-inner">
+          <div class="tarjeta-front">¿Qué nos hace diferentes?</div>
+          <div class="tarjeta-back">
+            Que nuestro objeto está basándose en otros objetos y no solo en el sonido, dándonos una mayor eficacia
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contactos -->
+    <section class="contactos">
+      <a href="https://www.facebook.com/profile.php?id=61575943024670" class="contacto-cuadro facebook" target="_blank">
+        <img src="Imagenes/facebook.png" alt="Facebook" class="icono" />
+        Facebook
+      </a>
+      <a href="leddzan@gmail.com" class="contacto-cuadro gmail">
+        <img src="Imagenes/gmail.png" alt="Gmail" class="icono" />
+        Gmail
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Todos los derechos reservados © Ledzan
+  </footer>
+
+  <!-- Script para mostrar u ocultar logos con animación -->
+<script>
+  const logoFijo = document.querySelector('.logo-fijo');
+  const logoInicial = document.querySelector('.logo-inicial');
+
+  function toggleLogos() {    
+    if (window.scrollY > 100) {
+      logoFijo.classList.remove('oculto');
+      logoFijo.classList.add('visible');
+      logoInicial.classList.remove('visible');
+      logoInicial.classList.add('oculto');
+    } else {
+      logoFijo.classList.remove('visible');
+      logoFijo.classList.add('oculto');
+      logoInicial.classList.remove('oculto');
+      logoInicial.classList.add('visible');
+    }
+  }
+
+  window.addEventListener('scroll', toggleLogos);
+  document.addEventListener('DOMContentLoaded', toggleLogos);
+</script>

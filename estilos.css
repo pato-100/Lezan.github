@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo-grande {
+  width: 500px;
+  height: auto;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Animación de visibilidad */
+.logo-inicial,
+.logo-fijo {
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.oculto {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.logo-inicial {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  position: relative;
+  text-align: center;
+}
+
+.logo-grande {
+  max-width: 80%;
+  height: auto;
+}
+
+.titulo-logo {
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: black;
+}
+
+
+
+.logo-fijo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  gap: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.logo-fijo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-fijo-texto {
+  font-weight: bold;
+  color: black;
+}
+
+main {
+  padding: 2rem;
+}
+
+/* Borde gris alrededor del producto */
+.contenedor-producto {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background-color: transparent;
+}
+
+.producto {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.producto img {
+  max-width: 400px;
+  width: 100%;
+}
+
+.producto .info {
+  max-width: 400px;
+}
+
+.tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  width: 250px;
+  height: 150px;
+  background-color: #f0f0f0;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.tarjeta-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.tarjeta:hover .tarjeta-inner {
+  transform: rotateY(180deg);
+}
+
+.tarjeta-front,
+.tarjeta-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tarjeta-front {
+  background-color: #ddd;
+  color: #333;
+}
+
+.tarjeta-back {
+  background-color: #7e3;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.tarjeta-back a {
+  color: white;
+  text-decoration: underline;
+}
+
+.contactos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.contacto-cuadro {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.icono {
+  width: 24px;
+  height: 24px;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #000;
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url("Imagenes/Fondo-Logo.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Contenedor del producto */
+.contenedor-producto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+/* Imagen del producto */
+.producto img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Texto en cuadro negro */
+.producto .info {
+  background-color: rgba(0, 0, 0, 0.8); /* negro semi-transparente */
+  color: white;
+  padding: 20px;
+  border-radius: 15px; /* esquinas redondeadas */
+  max-width: 300px;
+}
