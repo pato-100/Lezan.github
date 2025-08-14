@@ -222,8 +222,8 @@ body {
 
 /* Texto en cuadro negro */
 .producto .info {
-  background-color: rgba(0, 0, 0, 0.8); /* negro semi-transparente */
-  color: white;
+  background-color: transparent; /* negro semi-transparente */
+  color: black;
   padding: 20px;
   border-radius: 15px; /* esquinas redondeadas */
   max-width: 300px;
